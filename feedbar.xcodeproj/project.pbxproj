@@ -13,6 +13,10 @@
 		AF1E072A288935E2004624EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1E0728288935E2004624EA /* Main.storyboard */; };
 		AF1E072C288935E4004624EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1E072B288935E4004624EA /* Assets.xcassets */; };
 		AF1E072F288935E4004624EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1E072D288935E4004624EA /* LaunchScreen.storyboard */; };
+		AF1E07392889384C004624EA /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E07382889384C004624EA /* PostCell.xib */; };
+		AF1E073B28893852004624EA /* MediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1E073A28893852004624EA /* MediaCell.xib */; };
+		AF1E073D28893862004624EA /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E073C28893862004624EA /* PostCell.swift */; };
+		AF1E073F28893886004624EA /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E073E28893886004624EA /* MediaCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		AF1E072B288935E4004624EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1E072E288935E4004624EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF1E0730288935E4004624EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1E07382889384C004624EA /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		AF1E073A28893852004624EA /* MediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCell.xib; sourceTree = "<group>"; };
+		AF1E073C28893862004624EA /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		AF1E073E28893886004624EA /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				AF1E0724288935E2004624EA /* SceneDelegate.swift */,
 				AF1E0726288935E2004624EA /* ViewController.swift */,
 				AF1E0728288935E2004624EA /* Main.storyboard */,
+				AF1E073C28893862004624EA /* PostCell.swift */,
+				AF1E07382889384C004624EA /* PostCell.xib */,
+				AF1E073E28893886004624EA /* MediaCell.swift */,
+				AF1E073A28893852004624EA /* MediaCell.xib */,
 				AF1E072B288935E4004624EA /* Assets.xcassets */,
 				AF1E072D288935E4004624EA /* LaunchScreen.storyboard */,
 				AF1E0730288935E4004624EA /* Info.plist */,
@@ -127,7 +139,9 @@
 			files = (
 				AF1E072F288935E4004624EA /* LaunchScreen.storyboard in Resources */,
 				AF1E072C288935E4004624EA /* Assets.xcassets in Resources */,
+				AF1E073B28893852004624EA /* MediaCell.xib in Resources */,
 				AF1E072A288935E2004624EA /* Main.storyboard in Resources */,
+				AF1E07392889384C004624EA /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +154,9 @@
 			files = (
 				AF1E0727288935E2004624EA /* ViewController.swift in Sources */,
 				AF1E0723288935E2004624EA /* AppDelegate.swift in Sources */,
+				AF1E073F28893886004624EA /* MediaCell.swift in Sources */,
 				AF1E0725288935E2004624EA /* SceneDelegate.swift in Sources */,
+				AF1E073D28893862004624EA /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
