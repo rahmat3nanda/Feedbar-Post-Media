@@ -38,12 +38,12 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="zsb-hT-srX" secondAttribute="bottom" id="6kH-hN-vih"/>
-                <constraint firstItem="zsb-hT-srX" firstAttribute="top" secondItem="9em-DS-PiN" secondAttribute="top" id="7wE-GH-rQe"/>
+                <constraint firstItem="zsb-hT-srX" firstAttribute="centerY" secondItem="9em-DS-PiN" secondAttribute="centerY" id="57C-YO-cVP"/>
+                <constraint firstItem="zsb-hT-srX" firstAttribute="height" secondItem="9em-DS-PiN" secondAttribute="height" id="93o-wB-weE"/>
                 <constraint firstAttribute="trailing" secondItem="sm2-T4-jDH" secondAttribute="trailing" constant="16" id="Ctf-bJ-cWb"/>
-                <constraint firstAttribute="trailing" secondItem="zsb-hT-srX" secondAttribute="trailing" id="IFz-5w-E9G"/>
+                <constraint firstItem="zsb-hT-srX" firstAttribute="centerX" secondItem="9em-DS-PiN" secondAttribute="centerX" id="ET5-Yh-cuI"/>
                 <constraint firstItem="sm2-T4-jDH" firstAttribute="leading" secondItem="9em-DS-PiN" secondAttribute="leading" constant="16" id="JLb-QE-6oy"/>
-                <constraint firstItem="zsb-hT-srX" firstAttribute="leading" secondItem="9em-DS-PiN" secondAttribute="leading" id="kaC-Wx-xIk"/>
+                <constraint firstItem="zsb-hT-srX" firstAttribute="width" secondItem="9em-DS-PiN" secondAttribute="width" id="feL-dP-TAg"/>
                 <constraint firstAttribute="bottom" secondItem="sm2-T4-jDH" secondAttribute="bottom" constant="16" id="rLt-yQ-Qan"/>
             </constraints>
             <userDefinedRuntimeAttributes>
