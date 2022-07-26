@@ -21,4 +21,8 @@ class MediaCell: UICollectionViewCell{
         self.media = media
         indexLabel.text = media.message
     }
+    
+    func updateStatus(to status: String){
+        statusLabel.text = status
+    }
 }

@@ -5,7 +5,6 @@
 //  Created by Rahmat Trinanda Pramudya Amar on 26/07/22.
 //
 
-import Foundation
 import UIKit
 
 class FeedbarView: UIView{

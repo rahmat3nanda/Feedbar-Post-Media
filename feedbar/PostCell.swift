@@ -49,6 +49,24 @@ class PostCell: UICollectionViewCell{
         default:
             break
         }
+        updateCellStatus()
+    }
+    
+    private func updateCellStatus() {
+        var status = ""
+        switch(feedbarController.state){
+        case .paused:
+            status = "Paused"
+            break
+        case .played:
+            status = "Played"
+            break
+        default:
+            break
+        }
+        if let cell = mediaCollection.visibleCells.first as? MediaCell {
+            cell.updateStatus(to: status)
+        }
     }
 }
 
@@ -96,6 +114,14 @@ extension PostCell: UICollectionViewDataSource{
 }
 
 extension PostCell: UIScrollViewDelegate{
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if feedbarController.state == .played{
+            feedbarController.pause()
+            updateCellStatus()
+        }
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let visibleRect = CGRect(origin: mediaCollection.contentOffset, size: mediaCollection.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
@@ -103,8 +129,12 @@ extension PostCell: UIScrollViewDelegate{
         
         let cell = mediaCollection.cellForItem(at: index) as! MediaCell
         cell.setupMedia(media: post.medias[index.row])
-        currentIndex = index.row
-        feedbarController.animate(to: currentIndex)
+        feedbarController.play()
+        updateCellStatus()
+        if currentIndex != index.row {
+            currentIndex = index.row
+            feedbarController.animate(to: currentIndex)
+        }
     }
 }
 
