@@ -12,8 +12,8 @@ class PostCell: UICollectionViewCell{
     @IBOutlet var mediaCollection: UICollectionView!
     @IBOutlet var feedBarContainerView: UIView!
     
+    private var feedbarController: FeedbarController!
     private var post: PostModel!
-    private var message: String!
     var currentIndex: Int!
     
     static var name = "PostCell"
@@ -29,9 +29,44 @@ class PostCell: UICollectionViewCell{
         if let cell = mediaCollection.visibleCells.first as? MediaCell {
             cell.setupMedia(media: post.medias[currentIndex])
         }
+        var durations: [TimeInterval] = []
+        for i in 0..<post.medias.count {
+            durations.append(post.medias[i].duration)
+        }
+        feedbarController = FeedbarController(delegate: self, container: feedBarContainerView, durations: durations)
+        feedbarController.animate()
+        
+        mediaCollection.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handlePause)))
+    }
+    
+    @objc
+    func handlePause() {
+        switch(feedbarController.state){
+        case .paused:
+            feedbarController.play()
+        case .played:
+            feedbarController.pause()
+        default:
+            break
+        }
     }
 }
 
+extension PostCell: FeedbarDelegate{
+    func hasReachStart() {
+        scrollPost(to: 0)
+        feedbarController.animate()
+    }
+    
+    func hasChanged(to index: Int) {
+        scrollPost(to: index, animated: true)
+    }
+    
+    func hasReachEnd() {
+        scrollPost(to: 0, animated: true)
+        feedbarController.animate()
+    }
+}
 
 extension PostCell: UICollectionViewDelegate{
     
@@ -69,5 +104,15 @@ extension PostCell: UIScrollViewDelegate{
         let cell = mediaCollection.cellForItem(at: index) as! MediaCell
         cell.setupMedia(media: post.medias[index.row])
         currentIndex = index.row
+        feedbarController.animate(to: currentIndex)
+    }
+}
+
+
+// MARK: Helper
+extension PostCell {
+    func scrollPost(to index: Int, animated: Bool = false){
+        currentIndex = index
+        mediaCollection.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: animated)
     }
 }

@@ -19,7 +19,9 @@
 		AF1E073F28893886004624EA /* MediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E073E28893886004624EA /* MediaCell.swift */; };
 		AFA791FE288E533700BA7CBF /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA791FD288E533700BA7CBF /* MediaModel.swift */; };
 		AFA79200288E53AC00BA7CBF /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA791FF288E53AC00BA7CBF /* PostModel.swift */; };
-		AFA79206288E7AAF00BA7CBF /* Feedbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA79205288E7AAF00BA7CBF /* Feedbar.swift */; };
+		AFA79208288E7BBD00BA7CBF /* FeedbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA79207288E7BBD00BA7CBF /* FeedbarController.swift */; };
+		AFA79214288F8BE800BA7CBF /* FeedbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA79213288F8BE800BA7CBF /* FeedbarView.swift */; };
+		AFA79216288F8C8300BA7CBF /* FeedbarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA79215288F8C8300BA7CBF /* FeedbarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,9 @@
 		AF1E073E28893886004624EA /* MediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCell.swift; sourceTree = "<group>"; };
 		AFA791FD288E533700BA7CBF /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 		AFA791FF288E53AC00BA7CBF /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
-		AFA79205288E7AAF00BA7CBF /* Feedbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbar.swift; sourceTree = "<group>"; };
+		AFA79207288E7BBD00BA7CBF /* FeedbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbarController.swift; sourceTree = "<group>"; };
+		AFA79213288F8BE800BA7CBF /* FeedbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbarView.swift; sourceTree = "<group>"; };
+		AFA79215288F8C8300BA7CBF /* FeedbarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +87,9 @@
 				AF1E0730288935E4004624EA /* Info.plist */,
 				AFA791FF288E53AC00BA7CBF /* PostModel.swift */,
 				AFA791FD288E533700BA7CBF /* MediaModel.swift */,
-				AFA79205288E7AAF00BA7CBF /* Feedbar.swift */,
+				AFA79207288E7BBD00BA7CBF /* FeedbarController.swift */,
+				AFA79213288F8BE800BA7CBF /* FeedbarView.swift */,
+				AFA79215288F8C8300BA7CBF /* FeedbarModel.swift */,
 			);
 			path = feedbar;
 			sourceTree = "<group>";
@@ -162,13 +168,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1E0727288935E2004624EA /* ViewController.swift in Sources */,
-				AFA79206288E7AAF00BA7CBF /* Feedbar.swift in Sources */,
 				AFA79200288E53AC00BA7CBF /* PostModel.swift in Sources */,
 				AF1E0723288935E2004624EA /* AppDelegate.swift in Sources */,
 				AFA791FE288E533700BA7CBF /* MediaModel.swift in Sources */,
 				AF1E073F28893886004624EA /* MediaCell.swift in Sources */,
+				AFA79214288F8BE800BA7CBF /* FeedbarView.swift in Sources */,
 				AF1E0725288935E2004624EA /* SceneDelegate.swift in Sources */,
+				AFA79216288F8C8300BA7CBF /* FeedbarModel.swift in Sources */,
 				AF1E073D28893862004624EA /* PostCell.swift in Sources */,
+				AFA79208288E7BBD00BA7CBF /* FeedbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

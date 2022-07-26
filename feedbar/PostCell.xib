@@ -52,7 +52,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="feedBarContainerView" destination="sm2-T4-jDH" id="K92-Lq-JEr"/>
+                <outlet property="feedBarContainerView" destination="sm2-T4-jDH" id="iqY-Nk-yV2"/>
                 <outlet property="mediaCollection" destination="zsb-hT-srX" id="0Tb-WE-Cop"/>
             </connections>
             <point key="canvasLocation" x="-260.14492753623188" y="-141.29464285714286"/>
