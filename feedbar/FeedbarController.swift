@@ -99,10 +99,6 @@ private extension FeedbarController{
             }
         }
     }
-    
-    private func currentBar() -> FeedbarModel {
-        return barViews[currentIndex]
-    }
 }
 
 extension FeedbarController {
@@ -162,12 +158,18 @@ extension FeedbarController {
     
     
     func animate(to index: Int = 0){
+        let currentBar = barViews[index]
+    
         configureProgressBar(for: index)
         currentIndex = index
         delegate.hasChanged(to: index)
         
-        animator = UIViewPropertyAnimator(duration: self.currentBar().duration, curve: .linear) {
-            self.currentBar().view.progressView.frame.size.width = self.currentBar().view.frame.size.width
+        if let _ = animator {
+            animator = nil
+        }
+        
+        animator = UIViewPropertyAnimator(duration: currentBar.duration, curve: .linear) {
+            currentBar.view.progressView.frame.size.width = currentBar.view.frame.size.width
         }
         
         animator?.addCompletion { [weak self] (position) in

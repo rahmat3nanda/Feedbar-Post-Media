@@ -72,16 +72,16 @@ class PostCell: UICollectionViewCell{
 
 extension PostCell: FeedbarDelegate{
     func hasReachStart() {
-        scrollPost(to: 0)
+        scrollMedia(to: 0)
         feedbarController.animate()
     }
     
     func hasChanged(to index: Int) {
-        scrollPost(to: index, animated: true)
+        scrollMedia(to: index, animated: true)
     }
     
     func hasReachEnd() {
-        scrollPost(to: 0, animated: true)
+        scrollMedia(to: 0, animated: true)
         feedbarController.animate()
     }
 }
@@ -141,8 +141,10 @@ extension PostCell: UIScrollViewDelegate{
 
 // MARK: Helper
 extension PostCell {
-    func scrollPost(to index: Int, animated: Bool = false){
+    func scrollMedia(to index: Int, animated: Bool = false){
         currentIndex = index
+        mediaCollection.isPagingEnabled = false
         mediaCollection.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: animated)
+        mediaCollection.isPagingEnabled = true
     }
 }
