@@ -99,6 +99,10 @@ private extension FeedbarController{
             }
         }
     }
+    
+    private func currentBar() -> FeedbarModel {
+        return barViews[currentIndex]
+    }
 }
 
 extension FeedbarController {

@@ -116,7 +116,7 @@ extension PostCell: UICollectionViewDataSource{
 extension PostCell: UIScrollViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if feedbarController.state == .played{
+        if scrollView.isDragging{
             feedbarController.pause()
             updateCellStatus()
         }
